@@ -3,22 +3,22 @@
 These files are meant to placed in /home/pi/hue/ on the RPi.
 
 
-# Necessary packages for the Linux Image
+## Necessary packages for the Linux Image
 
-## Update python (2.x) to the latest release.
+### Update python (2.x) to the latest release.
 
 ```
 sudo apt-get install python-dev
 ```
 
-## Install the latest RPi.GPIO module (0.3.1a). We will use easy_install to manage the python packages. 
+### Install the latest RPi.GPIO module (0.3.1a). We will use easy_install to manage the python packages. 
 
 ```
 sudo apt-get install python-setuptools
 sudo easy_install rpi.gpio
 ```
 
-## Install Phue
+### Install Phue
 
 ```
 sudo easy_install phue
@@ -32,7 +32,7 @@ pip install phue
 ```
 
 
-# Systemd Installation
+## Systemd Installation
 
 This uses systemd for initializing for speed (over init.d).  
 
@@ -51,7 +51,7 @@ dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 r
 To list available units: ```systemctl```
 
 
-## Create Hue init service
+### Create Hue init service
 
 Create ```hue.service``` in ```/etc/systemd/system/``` and paste this into it:
 
